@@ -1,14 +1,20 @@
 # Makers' Software Sector Repository
 
-This repository is designed for our school's CCA Software Sector to collaborate, learn, and grow together.
+This repository is designed for the Makers' Software Sector to collaborate, learn, and grow together.
 
+## Table of contents
+- [Purpose](#purpose)
+- [How It Works](#how-it-works)
+- [Repository Structure](#repository-structure)
+- [Instructions](#getting-started---for-juniors)
+- [Guidelines](#guidelines)
 ## Purpose
 
 The goal of this repository is to:
 - Provide **reference solutions** from seniors  
 - Allow juniors to **practice and submit their own solutions**  
 - Encourage **learning through comparison and improvement**  
-- Build a shared **knowledge base** over time  
+- Build a shared **knowledge base** over time
 
 ## How It Works
 
