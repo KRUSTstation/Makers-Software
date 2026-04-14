@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+         <meta charset="utf-8">
+         <title>do ur stuff</title>
+         <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+      </head>
+      <body>
+         <section class="uppersect">
+            <h1>TO DO LIST</h1>
+         </section>
+         <section class="mainsect">
+            <h2>{% block header %}PAGE NOT FOUND{% endblock header %}</h2>
+            {% block body %}{% endblock body %}
+         </section>
+         <div id="toast-container">
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+               <div class="toast {{ category }}">{{ message }}</div>
+            {% endfor %}
+         </div>
+      </body>
+</html>
