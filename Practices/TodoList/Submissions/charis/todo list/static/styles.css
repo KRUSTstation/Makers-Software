@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    align-items:center;
+    width: 960px;
+    margin: 0 auto; 
+    background-color:aliceblue;
+    font-family:"Comic Sans MS",sans-serif;
+}
+
+h1 {
+    padding-top: 100px;
+}
+
+table {
+    margin: 0px auto;
+}
+
+th {
+    padding: 50px;
+}
+
+td {
+    text-wrap:wrap;
+}
+
+button {
+    background-color:beige;
+    border:3px;
+    font-family:"Comic Sans MS",sans-serif;
+}
