@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {text-align: center}
+        table {margin: 0 auto; border-collapse: collapse; width: 25%}
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <p>Add your tasks for the day here and procrastinate them afterwards!</p>
+    <form action="/submit" method="post">
+        <input type="text" name="task" placeholder="Enter a task" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Tasks</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ task }}</td>
+                <td>
+                    <form action="/delete" method="post">
+                        <input type="hidden" name="index" value="{{ loop.index0 }}">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
