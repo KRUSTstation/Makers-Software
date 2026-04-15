@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}do things{% endblock title %}
+{% block header %}get stuff done{% endblock header %}
+
+{% block body %}
+<form method="post">
+   <div class="form-group">
+      <label for="task">Enter task:</label>
+      <input name="task" type="text" id="task" placeholder="sleep">
+   </div>
+   <div class="form-group">
+      <input type="submit" value="add">
+   </div>
+</form>
+<div class="todolist">
+   <table>
+      <div class="table-header">
+         <tr class="header">
+            <th>ID</th>
+            <th>Task</th>
+            <th>Time made</th>
+            <th>Action</th>
+         </tr>
+      </div>
+      {% for task in tasks %}
+         <tr>
+            <td class="id">{{ task["id"] }}</td>
+            <td class="task">{{ task["task"] }}</td>
+            <td class="time">{{ task["created"] }}</td>
+            <td>
+               <form method="post" action="/delete/{{ task['id'] }}">
+                  <button type="submit">Delete</button>
+               </form>
+            </td>
+         </tr>
+      {% endfor %}
+   </table>
+</div>
+
+
+{% endblock body %}
+
+
