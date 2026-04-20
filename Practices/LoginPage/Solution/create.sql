@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS LoginDetails(
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    email TEXT NOT NULL,
+    password TEXT NOT NULL
+);

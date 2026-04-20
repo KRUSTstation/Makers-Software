@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <center>
+        <h1>WELCOME TO MY COMPLETELY NORMAL SIGNUP PAGE</h1>
+        <form action="/signup-checker" method="post">
+            Enter username: <input name="username"><br>
+            Enter email: <input type="email" name="email"><br>
+            Enter password: <input type="password" name="password"><br>
+            <button type="submit">GIVE ME YOUR INFO</button>
+        </form>
+        <p>Already have an account?: <a href="/login">Sign up</a></p>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li style="color:red;">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </center>
+</body>
+
+</html>
