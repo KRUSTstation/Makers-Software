@@ -5,6 +5,7 @@
 - Frontend by claude, everything else by my pet cat (maiself)
 
 **Web Link**: https://ticketing.saturday-s.com
+
 **Admin Page**: https://ticketing.saturday-s.com/admin (Password: House that starts with S)
 
 Tech Stack:
