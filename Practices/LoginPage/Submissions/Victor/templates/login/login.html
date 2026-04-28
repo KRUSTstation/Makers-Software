@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}lockin{% endblock title %}
+
+{% block header %}LOGIN{% endblock header %}
+
+{% block body %}
+<p>
+   Don't have an account? Sign up <a href="{{url_for('pages.signup')}}">here</a>
+</p>
+<form method="POST">
+   <div class="username">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" value="{{request.form['username']}}">
+   </div>
+   <div class="password">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" value="{{request.form['password']}}">
+   </div>
+   <div class="button">
+      <input type="submit" value="ok">
+   </div>
+</form>
+{% endblock body %}

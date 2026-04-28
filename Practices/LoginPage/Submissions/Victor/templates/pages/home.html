@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block header %}
+<div class="welcome">
+    <p>Welcome, {{ logged_in if logged_in else "Stranger" }}</p>
+</div>
+{% endblock header %}
+
+{% block body %}
+
+{% if logged_in %}
+   <a href="{{ url_for('pages.logout') }}" class="button">Logout</a>
+
+   <a href="{{ url_for('pages.posts')}}" class="button">view posts</a>
+   <a href="{{ url_for('pages.create')}}" class="button">make post</a>
+
+{% else %}
+   <a href="{{ url_for('pages.login') }}" class="button">Login</a>
+{% endif %}
+
+{% endblock body %}
