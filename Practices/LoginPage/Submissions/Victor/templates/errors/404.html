@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="jp">
+   <head>
+      <meta charset="utf-8">
+      <title>{% block title %}{% endblock title %}</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+   </head>
+   <body>
+      <h1>ERROR 404: Page not found</h1>
+      <p>Oops! This page is not exist. please find existing pages below:</p>
+      {% include("_navigate.html") %}
+      </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}sigma{% endblock title %}
+
+{% block header %}REGISTER{% endblock header %}
+
+{% block body %}
+<div class="gotologin">
+   <p>
+      Have an account? Login <a href="{{url_for('pages.login')}}">here</a>
+   </p>
+</div>
+<form method="POST">
+   <div class="username">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" value="{{request.form['username']}}">
+   </div>
+   <div class="password">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" value="{{request.form['password']}}">
+   </div>
+   <div class="cfm-password">
+      <label for="cfm-password">Reenter password:</label>
+      <input type="password" id="cfm-password" name="cfm-password" value="{{request.form['cfm-password']}}">
+   </div>
+   <div class="button">
+      <input type="submit" value="Sign up">
+   </div>
+</form>
+{% endblock body %}
